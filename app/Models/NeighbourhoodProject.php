@@ -18,6 +18,7 @@ class NeighbourhoodProject extends Model
         "tamamlanma_yuzdesi",
         "proje_detayi",
         "proje_durumu",
+        "mevkii"
     ];
     public function neighbourhood() {
         return $this->belongsTo(Neighbourhood::class);

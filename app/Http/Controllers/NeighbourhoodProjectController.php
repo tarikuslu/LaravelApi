@@ -35,6 +35,7 @@ class NeighbourhoodProjectController extends Controller
         $created_project["tamamlanma_yuzdesi"] = $request->tamamlanma_yuzdesi;
         $created_project["proje_detayi"] = $request->proje_detayi;
         $created_project["proje_durumu"] = $request->proje_durumu;
+        $created_project["mevkii"] = $request->mevkii;
         $created_project["neighbourhood_id"] = $neighbourhood->id;
 
         $created_project->save();
