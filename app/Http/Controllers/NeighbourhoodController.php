@@ -19,7 +19,7 @@ class NeighbourhoodController extends Controller
     public function update(Request $request, Neighbourhood $neighbourhood) {
         $validated_request = $request->validate([
             "mahalle_adi" => 'required|string|min:2|max:50',
-            "ilceye_uzaklik" => 'required|string|min:2|max:50',
+            "ilceye_uzaklik" => 'required|string|max:50',
             "yuzolcumu" => 'required',
             "imar_durumu" => 'required',
             "hane_sayisi"=> 'required',
@@ -43,8 +43,10 @@ class NeighbourhoodController extends Controller
             "cumhur2023oy_sayisi" => 'required',
             "millet2023oy_sayisi" => 'required',
             "yerel2019mhp_oy_sayisi" => 'required',
-            "yerel2019iyi_oy_sayisi" => 'required'
+            "yerel2019iyi_oy_sayisi" => 'required',
+            "nufus" => "required"
         ]);
+
         $neighbourhood->update($validated_request);
 
         return $neighbourhood;

@@ -34,7 +34,8 @@ class Neighbourhood extends Model
         "cumhur2023oy_sayisi",
         "millet2023oy_sayisi",
         "yerel2019mhp_oy_sayisi",
-        "yerel2019iyi_oy_sayisi"
+        "yerel2019iyi_oy_sayisi",
+        "nufus"
     ];
 
     public function headman() {
